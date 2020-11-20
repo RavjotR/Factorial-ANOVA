@@ -5,6 +5,7 @@ library(ggpubr)
 library(car)
 library(lsr)
 library(datarium)
+library(rstatix)
 
 #This section of code inserts the dataset that we will be using for our demo. The dataset is being pulled from the datarium package that we loaded in the last section
 
