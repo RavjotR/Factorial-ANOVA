@@ -1,0 +1,12 @@
+#The below script will just load all of the required libraries into R.
+
+library(dplyr)
+library(ggpubr)
+library(car)
+library(lsr)
+library(datarium)
+
+#This section of code inserts the dataset that we will be using for our demo. The dataset is being pulled from the datarium package that we loaded in the last section
+
+my_data <- heartattack
+#Alternatively, if you want to actually have the dataset be imported from a CSV file, you can use the read.csv function, where you specify the filepath where the data is stored in brackets.
