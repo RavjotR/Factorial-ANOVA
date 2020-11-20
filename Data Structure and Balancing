@@ -1,0 +1,20 @@
+#The below code will allow you to assess the strucutre of your dataframe
+
+str(my_data)
+
+
+#For running a factorial ANOVA, all of the Independent Variables should be saved as factors.
+
+#If the independent variables in the dataset are not saved as factors, the code below will allow you to convert the required variables into factors
+
+data1 <- data1 %>%
+  convert_as_factor(IV1, IV2, IV3)
+  #The convert as factor command can be used to convert as many variables in the dataset as you need.
+
+#Once again, the structure of the data should be assessed using the str command
+
+#Using the code below, you can generate frequency tables which will allow you to check whether your dataset is balanced or not. The given example is using the heartattack dataframe
+#in the datarium library
+
+table(my_data$risk, my_data$gender, my_data$drug)
+
