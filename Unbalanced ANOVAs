@@ -1,0 +1,11 @@
+To run a type 2 ANOVA, use the following code
+
+etaSquared(heartattackaov, type = 2, anova = TRUE)
+
+To run a type 3 ANOVA, use the following code
+
+etaSquared(heartattackaov, type = 1, anova = TRUE)
+
+To run a type 1 ANOVA, use the following code
+
+etaSquared(heartattackaov, type = 3, anova = TRUE)
