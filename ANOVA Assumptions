@@ -1,0 +1,17 @@
+ #The below code can be used to test assumptions in R for Homogeneity of Variance
+ 
+heartattackaov <- aov(cholesterol ~ drug*risk*gender, data = my_data)
+#The above line is jsut to define the actual ANOVA. Without defining it, we cannot create any of the tests.
+leveneTest(cholesterol ~ gender * risk * drug, data = my_data)
+#The above line runs the levene's test.
+plot(heartattackaov, 1)
+#The above line actually plots the residuals vs the fitted
+
+#The code below can be used to test assumptions in R for the normality of the residuals.
+
+plot(heartattackaov, 2)
+#The code above plots all of the residuals so we can see if they are normally distributed
+heartattackaov_residuals <- residuals(object = heartattackaov)
+#The code above extracts the residuals from the anova so we can run our tests
+shapiro.test(x = heartattackaov_residuals)
+#The code above actually runs the Shapiro-Wilks Test
