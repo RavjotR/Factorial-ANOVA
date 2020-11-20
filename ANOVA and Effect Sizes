@@ -1,0 +1,11 @@
+#The code below prints out a summary of the ANOVA function, with SS, DF and P Values
+
+summary(heartattackaov)
+
+#To get the effect size of eta squared, and partial eta squared, you would use the etaSquared function from the lsr library
+
+etaSquared(heartattackaov, type = 2, anova = TRUE)
+
+#This function will produce both the eta squared, and partial eta squared values. 
+#By setting the anova = TRUE, we can also print out the ANOVA along with the effect sizes
+#Currently, this is running a type 2 ANOVA. For balanced designs, this makes no difference, but for unbalanced designs it has an effect.
