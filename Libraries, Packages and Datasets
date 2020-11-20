@@ -1,8 +1,5 @@
 #The below script will just load all of the required libraries into R.
 
-library(dplyr)
-library(ggpubr)
-library(car)
 library(lsr)
 library(datarium)
 library(rstatix)
