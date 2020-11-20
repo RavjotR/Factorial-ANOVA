@@ -1,0 +1,9 @@
+#To run the Tukey's HSD test, you run the below code
+
+TukeyHSD(heartattackaov, which = "drug")
+
+#Tukey's HSD can only be run on IVs that have more than two levels. 
+
+#Pairwise t.tests can also be run with the below code, which will default to a bonferroni correction.
+
+pairwise.t.test(my_data$cholesterol, my_data$drug, p.adjust.method = "BH")
