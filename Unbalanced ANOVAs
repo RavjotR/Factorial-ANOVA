@@ -1,11 +1,11 @@
-To run a type 2 ANOVA, use the following code
+# Running a type I Anova uses the base anova() function in R, without any modifications. The code to do so is below
 
-etaSquared(heartattackaov, type = 2, anova = TRUE)
+anova(coffeaov)
+
+# Running a type II Anova requires the Anova() function from the car library. The code for doing so is below.
+
+anova(coffeeaov, type = 2)
 
 To run a type 3 ANOVA, use the following code
 
-etaSquared(heartattackaov, type = 1, anova = TRUE)
-
-To run a type 1 ANOVA, use the following code
-
-etaSquared(heartattackaov, type = 3, anova = TRUE)
+anova(coffeeaov, type = 3)
