@@ -4,8 +4,10 @@ anova(coffeaov)
 
 # Running a type II Anova requires the Anova() function from the car library. The code for doing so is below.
 
-anova(coffeeaov, type = 2)
+Anova(coffeeaov, type = 2)
 
-To run a type 3 ANOVA, use the following code
+#To run a type 3 ANOVA, use the following code
 
-anova(coffeeaov, type = 3)
+Anova(coffeeaov, type = 3)
+
+##For type II and III ANOVAs, ensure that the Anova() function is being used, rather than the anova() function.
