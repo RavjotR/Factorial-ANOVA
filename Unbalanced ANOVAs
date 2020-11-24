@@ -1,6 +1,24 @@
+#First, the new dataset must be uploaded from the computer and saved as a variable
+
+coffeedata -> read.csv("coffee.csv")
+
+#Afterwards, the ANOVA must be defined
+#The portion in the brackets is telling R to calculate the ANOVA with babble as the dependent variable, and accounting for the main effects of milk and sugar,
+as well as the interaction.
+coffeeaov -> aov(babble ~ milk*sugar, data = coffeedata)
+
+#A longform way of running the above command is below, with the : indicating interactions
+
+coffeeaov -> aov(babble ~ milk + sugar + milk:sugar, data = coffeedata
+
 # Running a type I Anova uses the base anova() function in R, without any modifications. The code to do so is below
 
 anova(coffeaov)
+
+# To run a type I Anova with the order of main effect testing flipped, you have define a new anova variable with the new order, as seen below.
+
+coffeeaov1 -> aov(babble ~ sugar*milk, data = coffeedata)
+anova(coffeeaov1)
 
 # Running a type II Anova requires the Anova() function from the car library. The code for doing so is below.
 
